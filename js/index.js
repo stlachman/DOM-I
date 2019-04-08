@@ -46,3 +46,30 @@ ctaImage.src = siteContent["cta"]["img-src"];
 
 let middleImage = document.getElementById("middle-img");
 middleImage.src = siteContent["main-content"]["middle-img-src"];
+
+
+
+
+// Main Content
+
+
+
+// Contact Info
+
+let contactHeader = document.querySelector('.contact h4');
+contactHeader.textContent = siteContent["contact"]["contact-h4"];
+
+let address = document.querySelector(".contact p");
+address.textContent = siteContent.contact.address;
+
+let phone = document.querySelector(".contact p:nth-of-type(2)");
+phone.textContent = siteContent.contact.phone;
+
+let email = document.querySelector(".contact p:last-child");
+email.textContent = siteContent.contact.email;
+
+
+// Copyright
+
+let copyright = document.querySelector("footer p");
+copyright.textContent = siteContent.footer.copyright;
