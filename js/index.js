@@ -54,13 +54,26 @@ middleImage.src = siteContent["main-content"]["middle-img-src"];
 
 // Top Content
 
+let featuresH4 = document.querySelector(".top-content .text-content h4");
+featuresH4.textContent = siteContent["main-content"]["features-h4"];
+
+let featuresContent = document.querySelector(".top-content .text-content p");
+featuresContent.textContent = siteContent["main-content"]["features-content"];
+
+
+let aboutH4 = document.querySelector(".top-content .text-content:last-child h4");
+aboutH4.textContent = siteContent["main-content"]["about-h4"];
+
+let aboutContent = document.querySelector(".top-content .text-content:last-child p");
+aboutContent.textContent = siteContent["main-content"]["about-content"];
+
 
 // Bottom Content
 
-let firstColumnH4 = document.querySelector(".bottom-content .text-content:first-of-type h4");
+let firstColumnH4 = document.querySelector(".bottom-content .text-content h4");
 firstColumnH4.textContent = siteContent["main-content"]["services-h4"];
 
-let firstColumnP = document.querySelector(".bottom-content .text-content:first-of-type p");
+let firstColumnP = document.querySelector(".bottom-content .text-content p");
 firstColumnP.textContent = siteContent["main-content"]["services-content"];
 
 
