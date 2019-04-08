@@ -52,7 +52,30 @@ middleImage.src = siteContent["main-content"]["middle-img-src"];
 
 // Main Content
 
+// Top Content
 
+
+// Bottom Content
+
+let firstColumnH4 = document.querySelector(".bottom-content .text-content:first-of-type h4");
+firstColumnH4.textContent = siteContent["main-content"]["services-h4"];
+
+let firstColumnP = document.querySelector(".bottom-content .text-content:first-of-type p");
+firstColumnP.textContent = siteContent["main-content"]["services-content"];
+
+
+let secondColumnH4 = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4");
+secondColumnH4.textContent = siteContent["main-content"]["product-h4"];
+
+let secondColumnP = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
+secondColumnP.textContent = siteContent["main-content"]["product-content"];
+
+
+let thirdColumnH4 = document.querySelector(".bottom-content .text-content:last-child h4");
+thirdColumnH4.textContent = siteContent["main-content"]["vision-h4"];
+
+let thirdColumnP = document.querySelector(".bottom-content .text-content:last-child p");
+thirdColumnP.textContent = siteContent["main-content"]["vision-content"];
 
 // Contact Info
 
