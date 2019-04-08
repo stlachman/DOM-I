@@ -42,6 +42,12 @@ const siteContent = {
 	}
 };
 
+const extraContent = {
+	filler: {
+		'filler-title': 'GIFs are Awesome'
+	}
+};
+
 // Example: Update the img src for the logo
 // Images
 const logo = document.getElementById('logo-img');
@@ -76,7 +82,6 @@ lastNavItem.text = 'Blog';
 lastNavItem.href = '#';
 lastNavItem.style.color = 'green';
 nav.appendChild(lastNavItem);
-
 
 // CTA Section
 const ctaTitle = document.querySelector('.cta-text h1');
@@ -139,3 +144,22 @@ email.textContent = siteContent.contact.email;
 
 const copyright = document.querySelector('footer p');
 copyright.textContent = siteContent.footer.copyright;
+
+// Additional Styles
+
+ctaButton.addEventListener('mouseenter', btnHover);
+ctaButton.addEventListener('mouseleave', btnHoverExit);
+
+function btnHover(e) {
+	this.style.border = '1px double red';
+}
+
+function btnHoverExit(e) {
+	this.style.border = '1px double black';
+}
+
+ctaButton.addEventListener('click', updateContent);
+
+function updateContent(e) {
+	ctaTitle.textContent = extraContent['filler']['filler-title'];
+}
