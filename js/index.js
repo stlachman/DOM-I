@@ -158,6 +158,12 @@ function btnHoverExit(e) {
 	this.style.border = '1px double black';
 }
 
+ctaButton.addEventListener('dblclick', doubleClick);
+
+function doubleClick(e) {
+  this.textContent = "You rang?"
+}
+
 ctaButton.addEventListener('click', updateContent);
 
 function updateContent(e) {
