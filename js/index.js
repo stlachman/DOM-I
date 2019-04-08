@@ -56,7 +56,7 @@ middleImage.src = siteContent['main-content']['middle-img-src'];
 // Navigation Section
 const navContent = siteContent['nav'];
 
-const navigationItems = document.querySelectorAll('nav a');
+let navigationItems = document.querySelectorAll('nav a');
 navigationItems.forEach((navItem, index) => (navItem.textContent = navContent[`nav-item-${index + 1}`]));
 
 // Update color to green
@@ -67,14 +67,16 @@ const nav = document.querySelector('nav');
 const firstNavItem = document.createElement('a');
 firstNavItem.textContent = 'Home';
 firstNavItem.href = '#';
+firstNavItem.style.color = 'green';
 
 nav.prepend(firstNavItem);
 
 const lastNavItem = document.createElement('a');
 lastNavItem.text = 'Blog';
 lastNavItem.href = '#';
-
+lastNavItem.style.color = 'green';
 nav.appendChild(lastNavItem);
+
 
 // CTA Section
 const ctaTitle = document.querySelector('.cta-text h1');
