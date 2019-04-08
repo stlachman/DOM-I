@@ -39,22 +39,28 @@ const siteContent = {
 
 // Example: Update the img src for the logo
 // Images
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let ctaImage = document.getElementById("cta-img");
+const ctaImage = document.getElementById("cta-img");
 ctaImage.src = siteContent["cta"]["img-src"];
 
-let middleImage = document.getElementById("middle-img");
+const middleImage = document.getElementById("middle-img");
 middleImage.src = siteContent["main-content"]["middle-img-src"];
+
+// Navigation Section
+const navContent = siteContent["nav"];
+
+const navigation = document.querySelectorAll("nav a");
+navigation.forEach((navItem, index) => navItem.textContent = navContent[`nav-item-${index + 1}`]);
 
 
 
 // CTA Section
-let ctaTitle = document.querySelector(".cta-text h1");
+const ctaTitle = document.querySelector(".cta-text h1");
 ctaTitle.textContent = siteContent["cta"]["h1"];
 
-let ctaButton = document.querySelector(".cta-text button");
+const ctaButton = document.querySelector(".cta-text button");
 ctaButton.textContent = siteContent["cta"]["button"];
 
 
@@ -63,58 +69,58 @@ ctaButton.textContent = siteContent["cta"]["button"];
 
 // Top Content
 
-let featuresH4 = document.querySelector(".top-content .text-content h4");
+const featuresH4 = document.querySelector(".top-content .text-content h4");
 featuresH4.textContent = siteContent["main-content"]["features-h4"];
 
-let featuresContent = document.querySelector(".top-content .text-content p");
+const featuresContent = document.querySelector(".top-content .text-content p");
 featuresContent.textContent = siteContent["main-content"]["features-content"];
 
 
-let aboutH4 = document.querySelector(".top-content .text-content:last-child h4");
+const aboutH4 = document.querySelector(".top-content .text-content:last-child h4");
 aboutH4.textContent = siteContent["main-content"]["about-h4"];
 
-let aboutContent = document.querySelector(".top-content .text-content:last-child p");
+const aboutContent = document.querySelector(".top-content .text-content:last-child p");
 aboutContent.textContent = siteContent["main-content"]["about-content"];
 
 
 // Bottom Content
 
-let firstColumnH4 = document.querySelector(".bottom-content .text-content h4");
+const firstColumnH4 = document.querySelector(".bottom-content .text-content h4");
 firstColumnH4.textContent = siteContent["main-content"]["services-h4"];
 
-let firstColumnP = document.querySelector(".bottom-content .text-content p");
+const firstColumnP = document.querySelector(".bottom-content .text-content p");
 firstColumnP.textContent = siteContent["main-content"]["services-content"];
 
 
-let secondColumnH4 = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4");
+const secondColumnH4 = document.querySelector(".bottom-content .text-content:nth-of-type(2) h4");
 secondColumnH4.textContent = siteContent["main-content"]["product-h4"];
 
-let secondColumnP = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
+const secondColumnP = document.querySelector(".bottom-content .text-content:nth-of-type(2) p");
 secondColumnP.textContent = siteContent["main-content"]["product-content"];
 
 
-let thirdColumnH4 = document.querySelector(".bottom-content .text-content:last-child h4");
+const thirdColumnH4 = document.querySelector(".bottom-content .text-content:last-child h4");
 thirdColumnH4.textContent = siteContent["main-content"]["vision-h4"];
 
-let thirdColumnP = document.querySelector(".bottom-content .text-content:last-child p");
+const thirdColumnP = document.querySelector(".bottom-content .text-content:last-child p");
 thirdColumnP.textContent = siteContent["main-content"]["vision-content"];
 
 // Contact Info
 
-let contactHeader = document.querySelector('.contact h4');
+const contactHeader = document.querySelector('.contact h4');
 contactHeader.textContent = siteContent["contact"]["contact-h4"];
 
-let address = document.querySelector(".contact p");
+const address = document.querySelector(".contact p");
 address.textContent = siteContent.contact.address;
 
-let phone = document.querySelector(".contact p:nth-of-type(2)");
+const phone = document.querySelector(".contact p:nth-of-type(2)");
 phone.textContent = siteContent.contact.phone;
 
-let email = document.querySelector(".contact p:last-child");
+const email = document.querySelector(".contact p:last-child");
 email.textContent = siteContent.contact.email;
 
 
 // Copyright
 
-let copyright = document.querySelector("footer p");
+const copyright = document.querySelector("footer p");
 copyright.textContent = siteContent.footer.copyright;
