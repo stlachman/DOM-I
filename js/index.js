@@ -38,6 +38,7 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+// Images
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -47,6 +48,14 @@ ctaImage.src = siteContent["cta"]["img-src"];
 let middleImage = document.getElementById("middle-img");
 middleImage.src = siteContent["main-content"]["middle-img-src"];
 
+
+
+// CTA Section
+let ctaTitle = document.querySelector(".cta-text h1");
+ctaTitle.textContent = siteContent["cta"]["h1"];
+
+let ctaButton = document.querySelector(".cta-text button");
+ctaButton.textContent = siteContent["cta"]["button"];
 
 
 
